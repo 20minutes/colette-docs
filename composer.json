@@ -1,0 +1,15 @@
+{
+    "name": "colette/documentation",
+    "description": "A complete guide to use Colette (wip)",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Olivia Ly",
+            "email": "oly@20minutes.fr"
+        }
+    ],
+    "config": {
+        "component-dir": "vendor"
+    }
+}
+
