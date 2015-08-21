@@ -4,6 +4,7 @@
   "description": "A complete guide to use Colette (wip)",
   "main": "index.js",
   "devDependencies": {
+    "gulp": "^3.9.0",
     "gulp-minify": "0.0.5",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.6",

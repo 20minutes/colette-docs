@@ -8,7 +8,7 @@ var gulp      = require('gulp'),
 var cfg = {
     bowerDir: './vendor/bower_components/',
     assetsDir: './source/assets/',
-    stylusPattern: 'styl/**/*.styl',
+    stylusPattern: 'styl/*',
     jsPattern: 'js/**/*.js'
 };
 

@@ -3,58 +3,70 @@
 <head>
     <title>{{ page.title }} | From base layout</title>
     <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
-    <ul>
-        <li>
-            <a>Basics</a>
-            <ul>
-                <li><a href="/basics/typography">Typography</a></li>
-                <li><a href="/basics/colors">Colors</a></li>
-                <li><a href="/basics/icons">Icons</a></li>
-                <li><a href="/basics/helpers">Helpers</a></li>
-                <li><a href="/basics/grid">Grid</a></li>
-            </ul>
-        </li>
-        <li>
-            <a>Components</a>
-            <ul>
-                <li><a href="/components/loading">Loading</a></li>
-                <li><a href="/components/teasers">Teasers</a></li>
-                <li><a href="/components/media">Media</a></li>
-            </ul>
-        </li>
-        <li>
-            <a>Code conventions</a>
-            <ul>
-                <li><a href="/code-conventions/stylus">Stylus</a></li>
-                <li><a href="/code-conventions/javascript">Javascript</a></li>
-            </ul>
-        </li>
-        <li>
-            <a>La 21<sup>e</sup> Minute</a>
-            <ul>
-                <li><a href="/la21e/startscreen">Start screen</a></li>
-                <li><a href="/la21e/carousel">Carousel</a></li>
-                <li><a href="/la21e/gallery">Gallery</a></li>
-                <li><a href="/la21e/seo">SEO</a></li>
-            </ul>
-        </li>
-        <li>
-            <a>Images formats</a>
-            <ul>
-                <li><a href="/image-formats/contents">Promo</a></li>
-                <li><a href="/image-formats/stylus">Promo</a></li>
-                <li><a href="/image-formats/seo">SEO</a></li>
-            </ul>
-        </li>
-    </ul>
-    <main>
-        {% block content %}
-            Hello world !
-        {% endblock %}
-    </main>
-    <footer>Copyrigth and other footer information</footer>
+    <!-- navigation bar -->
+    <div class="headerbar">
+        <ul>
+            <li><a href="#" class="brand" data-icon="logo"><em>Retour à l'accueil</em></a></li>
+            <li class="float-right"><a href="#" data-icon="twitter"><em>20 Minutes webtech sur Twitter</em></a></li>
+            <li class="float-right"><a href="#"><img src="/assets/images/github.png" class="inline" width="24" height="24" alt="github" /></a></li>
+        </ul>
+    </div>
+    <!-- / navigation bar -->
+    <div class="content clearfix">
+        <ul class="side-nav col-lg-4">
+            <li>
+                <a>Basics</a>
+                <ul>
+                    <li><a href="/basics/typography">Typography</a></li>
+                    <li><a href="/basics/colors">Colors</a></li>
+                    <li><a href="/basics/icons">Icons</a></li>
+                    <li><a href="/basics/helpers">Helpers</a></li>
+                    <li><a href="/basics/grid">Grid</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>Components</a>
+                <ul>
+                    <li><a href="/components/loading">Loading</a></li>
+                    <li><a href="/components/teasers">Teasers</a></li>
+                    <li><a href="/components/media">Media</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>Code conventions</a>
+                <ul>
+                    <li><a href="/code-conventions/stylus">Stylus</a></li>
+                    <li><a href="/code-conventions/javascript">Javascript</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>La 21<sup>e</sup> Minute</a>
+                <ul>
+                    <li><a href="/la21e/startscreen">Start screen</a></li>
+                    <li><a href="/la21e/carousel">Carousel</a></li>
+                    <li><a href="/la21e/gallery">Gallery</a></li>
+                    <li><a href="/la21e/seo">SEO</a></li>
+                </ul>
+            </li>
+            <li>
+                <a>Images formats</a>
+                <ul>
+                    <li><a href="/image-formats/contents">Promo</a></li>
+                    <li><a href="/image-formats/stylus">Promo</a></li>
+                    <li><a href="/image-formats/seo">SEO</a></li>
+                </ul>
+            </li>
+        </ul>
+        <main class="col-lg-8">
+            {% block content_title %}<h1>{{ page.title }}</h1>{% endblock %}
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+    <footer>Copyright and other footer information</footer>
 </body>
 </html>
 
