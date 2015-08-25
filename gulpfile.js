@@ -3,18 +3,22 @@ var gulp      = require('gulp'),
     rename    = require('gulp-rename'),
     stylus    = require('gulp-stylus'),
     minifyCss = require('gulp-minify'),
-    uglify    = require('gulp-uglify');
+    uglify    = require('gulp-uglify'),
+    plumber    = require('gulp-plumber'),
+    concat    = require('gulp-concat');
 
 var cfg = {
     bowerDir: './vendor/bower_components/',
     assetsDir: './source/assets/',
-    stylusPattern: 'styl/*',
-    jsPattern: 'js/**/*.js'
+    outputDir: './output_dev/assets/',
+    stylusPattern: '_styl/**/*.styl',
+    jsPattern: '_js/**/*.js'
 };
 
 gulp.task('styles', function()
 {
-   return gulp.src(cfg.assetsDir + 'styl/styles.styl')
+   return gulp.src(cfg.assetsDir + '_styl/styles.styl')
+       .pipe(plumber())
        .pipe(stylus({
            compress: true,
            linenos: true,
@@ -25,16 +29,15 @@ gulp.task('styles', function()
            ]
        }))
        .pipe(minifyCss())
-       .pipe(gulp.dest(cfg.assetsDir));
+       .pipe(gulp.dest(cfg.outputDir));
 });
 
 gulp.task('scripts', function()
 {
     return gulp.src(cfg.bowerDir + 'colette/js/colette.js')
-        .pipe(rename(function(path){
-            path.basename = path.basename.replace('.js', '.min.js');
-        }))
+        .pipe(plumber())
         .pipe(uglify())
+        .pipe(concat('scripts.min.js'))
         .pipe(gulp.dest(cfg.assetsDir));
 });
 

@@ -1,0 +1,49 @@
+/* project styles */
+body
+    background-color #f8f8f8!important
+
+.page-title
+    @extends .pt2, .pb1
+    background-color #e7e7e7
+
+    h1
+        font-size 4.2rem
+        font-weight normal
+
+main
+    float right!important
+
+    h2
+        @extends .mt2, .pb1
+        font-weight normal
+        font-size 3rem
+
+    h3
+        @extends .mt2, .pb1
+        font-weight normal
+        font-size 2.4rem
+
+    p
+        @extends .pb1
+
+.lt-centered
+    @extends .clearfix
+    display block
+    max-width 1280px
+    margin 0 auto
+
+.content
+    min-height 100vh
+
+.side-nav
+    float left!important
+
+    li
+        list-style-type none
+
+        a
+            display block
+            line-height 36px
+
+        li a
+            padding-left 2.4rem
