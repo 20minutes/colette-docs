@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
 <head>
-    <title>Typography | From base layout</title>
+    <title>Typography | Colette</title>
     <link rel="shortcut icon" type="image/png" href="/assets/favicon.ico" />
     <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
     <!-- navigation bar -->
-    <div class="headerbar">
+    <div class="headerbar bbs">
         <ul>
             <li><a href="#" class="brand" data-icon="logo"><em>Retour à l'accueil</em></a></li>
             <li class="float-right"><a href="#" data-icon="twitter"><em>20 Minutes webtech sur Twitter</em></a></li>
@@ -15,8 +15,39 @@
         </ul>
     </div>
     <!-- / navigation bar -->
-    <div class="content clearfix">
-        <ul class="side-nav col-lg-4">
+    <div class="page-title">
+        <h1 class="lt-centered">
+            <span class="col-md-9 offset-md-3 pl6">Typography</span>        </h1>
+    </div>
+    <div class="content lt-centered">
+        <main class="col-md-9 pt3 pr6 pb3 pl6">
+            <p>The standard fonts used in 20 Minutes digital projects are Open Sans and Helvetica.</p>
+
+<div class="col-md-6 pr2">
+    <h2>Open Sans</h2>
+    <p>Open Sans is included in the project and available in 3 weights: Regular, Bold and Extra Bold (900).</p>
+    <p>Open Sans is systematically used for content titles and quotes</p>
+    <p>Here is an image Open Sans document displaying the different font weights and styles available in the project.</p>
+</div>
+<div class="col-md-6 pl2">
+    <p class="box pa1 mt2"><img src="/assets/images/opensans-specimen.gif" /> </p>
+</div>
+
+<hr class="vsb-hidden" />
+
+<h3>Headings</h3>
+<p>Use either html markup <b>h1, ..., h6</b> or headings classes <b>.h1, ..., .h6</b> to style headings:</p>
+<p class="box pa1"><img src="/assets/images/headings.gif" /> </p>
+
+<h3>Blockquotes</h3>
+<p class="box pa1"><em><img src="/assets/images/blockquote.gif" /></em></p>
+
+<h2 class="mt6">Helvetica</h2>
+<p>Helvetica is used as the default font for flow text.</p>
+
+<h2 class="mt6">Icons</h2>
+<p>The project also comes with a custom icon font 20mn. See <a href="/basics/icons">section "Icons"</a> section for description and usages.</p>        </main>
+        <ul class="side-nav col-md-3 pt3">
             <li>
                 <a>Basics</a>
                 <ul>
@@ -28,7 +59,7 @@
                 </ul>
             </li>
             <li>
-                <a>Components</a>
+                <a>Modules</a>
                 <ul>
                     <li><a href="/components/loading">Loading</a></li>
                     <li><a href="/components/teasers">Teasers</a></li>
@@ -60,8 +91,6 @@
                 </ul>
             </li>
         </ul>
-        <main class="col-lg-8">
-            <h1>Typography</h1>            Typography        </main>
     </div>
     <footer>Copyright and other footer information</footer>
 </body>
