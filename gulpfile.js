@@ -9,10 +9,11 @@ var gulp      = require('gulp'),
 
 var cfg = {
     bowerDir: './vendor/bower_components/',
-    assetsDir: './source/assets/',
-    outputDir: './output_dev/assets/',
-    stylusPattern: '_styl/**/*.styl',
-    jsPattern: '_js/**/*.js'
+    cssDir: './source/_styl/',
+    jsDir: './source/_js/',
+    assetsDir: './output_dev/assets/',
+    stylusPattern: '**/*.styl',
+    jsPattern: '**/*.js'
 };
 
 gulp.task('styles', function()
@@ -29,7 +30,7 @@ gulp.task('styles', function()
            ]
        }))
        .pipe(minifyCss())
-       .pipe(gulp.dest(cfg.outputDir));
+       .pipe(gulp.dest(cfg.assetsDir));
 });
 
 gulp.task('scripts', function()
@@ -43,8 +44,8 @@ gulp.task('scripts', function()
 
 gulp.task('watch', function()
 {
-    gulp.watch(cfg.assetsDir + cfg.stylusPattern, ['styles']);
-    gulp.watch(cfg.assetsDir + cfg.jsPattern, ['scripts']);
+    gulp.watch(cfg.cssDir + cfg.stylusPattern, ['styles']);
+    gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
 });
 
 gulp.task('default', ['styles', 'scripts']);
